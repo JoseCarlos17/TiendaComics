@@ -80,39 +80,39 @@ public class Clientes extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setText("Código");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 114, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Nombre");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 149, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setText("Apellidos");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 184, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setText("FechaNacimiento");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 222, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 250, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setText("FechaCliente");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 253, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 290, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setText("HistorialPedidos");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(166, 282, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, -1, -1));
 
         Codigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CodigoActionPerformed(evt);
             }
         });
-        getContentPane().add(Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 111, 200, -1));
-        getContentPane().add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 149, 200, -1));
-        getContentPane().add(Apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 181, 200, -1));
-        getContentPane().add(FechaCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 250, 200, -1));
-        getContentPane().add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 219, 200, -1));
-        getContentPane().add(HistorialPed, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 281, 200, -1));
+        getContentPane().add(Codigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 200, -1));
+        getContentPane().add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 200, -1));
+        getContentPane().add(Apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 200, -1));
+        getContentPane().add(FechaCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 200, -1));
+        getContentPane().add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 200, -1));
+        getContentPane().add(HistorialPed, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 200, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/wolverine.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");

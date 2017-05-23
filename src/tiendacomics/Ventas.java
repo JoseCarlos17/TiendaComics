@@ -40,6 +40,11 @@ public class Ventas extends javax.swing.JFrame {
         String query = "select * from Facturas F";
         r = s.executeQuery(query);
         r.first();
+        
+        Id.setText(r.getString("Codigo"));
+        Fecha.setText(r.getString("Nombre"));
+        Historial.setText(r.getString("Apellidos"));
+        IdCli.setText(r.getString("FechaNacimiento"));
     }
 
     /**
@@ -56,10 +61,10 @@ public class Ventas extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Id = new javax.swing.JTextField();
+        Fecha = new javax.swing.JTextField();
+        Historial = new javax.swing.JTextField();
+        IdCli = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,33 +90,33 @@ public class Ventas extends javax.swing.JFrame {
         jLabel5.setText("IdCliente");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                IdActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 211, -1));
+        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 120, 211, -1));
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Fecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                FechaActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 211, -1));
+        getContentPane().add(Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 211, -1));
 
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        Historial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                HistorialActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 211, -1));
+        getContentPane().add(Historial, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 211, -1));
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        IdCli.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                IdCliActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 211, -1));
+        getContentPane().add(IdCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 310, 211, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/spiderman.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
@@ -120,36 +125,36 @@ public class Ventas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void IdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_IdActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void FechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_FechaActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void HistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HistorialActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_HistorialActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void IdCliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IdCliActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_IdCliActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Fecha;
+    private javax.swing.JTextField Historial;
+    private javax.swing.JTextField Id;
+    private javax.swing.JTextField IdCli;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

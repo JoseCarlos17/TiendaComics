@@ -41,6 +41,14 @@ public class Facturas extends javax.swing.JFrame {
         r = s.executeQuery(query);
         r.first();
         
+        Id.setText(r.getString("Codigo"));
+        Articulo.setText(r.getString("Nombre"));
+        Cantidad.setText(r.getString("Apellidos"));
+        Precio.setText(r.getString("FechaNacimiento"));
+        IVA.setText(r.getString("FechaCliente"));
+        FechaFac.setText(r.getString("HistorialPedidos"));
+        IdCli.setText(r.getString("HistorialPedidos"));
+        
     }
 
     /**
@@ -60,13 +68,13 @@ public class Facturas extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        Id = new javax.swing.JTextField();
+        Articulo = new javax.swing.JTextField();
+        Cantidad = new javax.swing.JTextField();
+        Precio = new javax.swing.JTextField();
+        IVA = new javax.swing.JTextField();
+        FechaFac = new javax.swing.JTextField();
+        IdCli = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,13 +111,13 @@ public class Facturas extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel8.setText("IdCliente");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 222, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 222, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 222, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 222, -1));
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 222, -1));
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 222, -1));
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 222, -1));
+        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 222, -1));
+        getContentPane().add(Articulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 222, -1));
+        getContentPane().add(Cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 222, -1));
+        getContentPane().add(Precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 222, -1));
+        getContentPane().add(IVA, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 222, -1));
+        getContentPane().add(FechaFac, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 222, -1));
+        getContentPane().add(IdCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 222, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/joker.jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
@@ -124,6 +132,13 @@ public class Facturas extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Articulo;
+    private javax.swing.JTextField Cantidad;
+    private javax.swing.JTextField FechaFac;
+    private javax.swing.JTextField IVA;
+    private javax.swing.JTextField Id;
+    private javax.swing.JTextField IdCli;
+    private javax.swing.JTextField Precio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -133,12 +148,5 @@ public class Facturas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

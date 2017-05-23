@@ -40,6 +40,11 @@ public class Distribuidores extends javax.swing.JFrame {
         String query = "select * from Distribuidores D";
         r = s.executeQuery(query);
         r.first();
+        
+        Id.setText(r.getString("Codigo"));
+        Nombre.setText(r.getString("Nombre"));
+        Pais.setText(r.getString("Apellidos"));
+        
     }
 
     /**
@@ -55,9 +60,9 @@ public class Distribuidores extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        Id = new javax.swing.JTextField();
+        Nombre = new javax.swing.JTextField();
+        Pais = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,9 +87,9 @@ public class Distribuidores extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("País");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 199, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 199, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 199, -1));
+        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 199, -1));
+        getContentPane().add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 199, -1));
+        getContentPane().add(Pais, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 199, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/batman.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -99,13 +104,13 @@ public class Distribuidores extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Id;
+    private javax.swing.JTextField Nombre;
+    private javax.swing.JTextField Pais;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
 }

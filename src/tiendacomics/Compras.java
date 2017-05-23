@@ -36,6 +36,12 @@ public class Compras extends javax.swing.JFrame {
         String query = "select * from Compras CP";
         r = s.executeQuery(query);
         r.first();
+        
+        Id.setText(r.getString("Codigo"));
+        Fecha.setText(r.getString("Nombre"));
+        FormaPago.setText(r.getString("Apellidos"));
+        IdCli.setText(r.getString("FechaNacimiento"));
+        
     }
 
     /**
@@ -52,10 +58,10 @@ public class Compras extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Id = new javax.swing.JTextField();
+        Fecha = new javax.swing.JTextField();
+        FormaPago = new javax.swing.JTextField();
+        IdCli = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -86,10 +92,10 @@ public class Compras extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("IdCliente");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, -1, -1));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 210, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 210, -1));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 210, -1));
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 210, -1));
+        getContentPane().add(Id, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 210, -1));
+        getContentPane().add(Fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 210, -1));
+        getContentPane().add(FormaPago, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 210, -1));
+        getContentPane().add(IdCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 210, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,15 +112,15 @@ public class Compras extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Fecha;
+    private javax.swing.JTextField FormaPago;
+    private javax.swing.JTextField Id;
+    private javax.swing.JTextField IdCli;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,18 +5,31 @@
  */
 package tiendacomics;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author AlumMati
  */
 public class Login extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Login
-     */
+        static public ResultSet r2;
+        static public Connection connec;
+    
     public Login() {
+        
         initComponents();
+        
+
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,26 +40,39 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        User = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        Login = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        Passwd = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 260, -1));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 260, -1));
+        getContentPane().add(User, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, 260, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Contraseña");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Usuario");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, -1, -1));
+
+        Login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/iconos/User_Avatar-512.png"))); // NOI18N
+        Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 100, 90));
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/iconos/logout-512.png"))); // NOI18N
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, 100, 90));
+        getContentPane().add(Passwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 340, 260, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/deadpool.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -54,6 +80,47 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+        
+            try {
+                boolean esverdad=true;
+                
+                Class.forName("com.mysql.jdbc.Driver");
+                String url ="jdbc:mysql://localhost:3306/bd_aplicacion";
+                connec = (java.sql.DriverManager.getConnection(url,"root",""));
+                Statement s = (Statement) connec.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+                String query="SELECT * FROM usuarios";
+                r2=s.executeQuery(query);
+                String usuario=User.getText();
+                char contrapass[] = Passwd.getPassword();
+                String contra = new String(contrapass);
+                while(r2.next()){
+                    if(usuario.equals(r2.getString("Nombre"))){
+                        if(contra.equals(r2.getString("Contra"))){
+                            esverdad=false;
+                        }
+                    }
+                }
+                
+                
+                
+                if (esverdad==false){
+                    Menu men = new Menu();
+                    men.setVisible(true);
+                    this.setVisible(false);
+                    men.setLocationRelativeTo(null);
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "", "Login Fallido", JOptionPane.WARNING_MESSAGE);
+                    Passwd.setText("");
+                }    } catch (ClassNotFoundException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+    }//GEN-LAST:event_LoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,10 +158,12 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Login;
+    private javax.swing.JPasswordField Passwd;
+    private javax.swing.JTextField User;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

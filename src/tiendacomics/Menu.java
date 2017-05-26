@@ -16,6 +16,8 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        
+        
     }
 
     /**
@@ -60,8 +62,8 @@ public class Menu extends javax.swing.JFrame {
         jButton6.setText("Peticiones");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 110, 50));
 
-        jButton7.setText("Desconexión");
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 190, 50));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/iconos/logout-512.png"))); // NOI18N
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 110, 80));
 
         jButton8.setText("Ventas");
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 110, 50));
@@ -70,6 +72,7 @@ public class Menu extends javax.swing.JFrame {
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 110, 50));
 
         jButton10.setText("Clientes");
+        jButton10.setBorder(null);
         getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 110, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/menuflash.jpg"))); // NOI18N

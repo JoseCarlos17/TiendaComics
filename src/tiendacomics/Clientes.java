@@ -68,6 +68,9 @@ public class Clientes extends javax.swing.JFrame {
         FechaCli = new javax.swing.JTextField();
         FechaNac = new javax.swing.JTextField();
         HistorialPed = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -113,6 +116,15 @@ public class Clientes extends javax.swing.JFrame {
         getContentPane().add(FechaCli, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, 200, -1));
         getContentPane().add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 200, -1));
         getContentPane().add(HistorialPed, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 200, -1));
+
+        jButton1.setText("jButton1");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+
+        jButton2.setText("jButton1");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+
+        jButton3.setText("jButton1");
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/wolverine.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
@@ -166,6 +178,9 @@ public class Clientes extends javax.swing.JFrame {
     private javax.swing.JTextField FechaNac;
     private javax.swing.JTextField HistorialPed;
     private javax.swing.JTextField Nombre;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -35,7 +35,7 @@ public class Menu extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        Desconexion = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
@@ -62,8 +62,13 @@ public class Menu extends javax.swing.JFrame {
         jButton6.setText("Peticiones");
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 110, 50));
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/iconos/logout-512.png"))); // NOI18N
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 110, 80));
+        Desconexion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tiendacomics/imagenes/iconos/logout-512.png"))); // NOI18N
+        Desconexion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DesconexionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Desconexion, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 110, 80));
 
         jButton8.setText("Ventas");
         getContentPane().add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 110, 50));
@@ -81,6 +86,12 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void DesconexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DesconexionActionPerformed
+        dispose();
+        Login log = new Login();
+        log.setVisible(true);
+    }//GEN-LAST:event_DesconexionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,6 +129,7 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Desconexion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
@@ -125,7 +137,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;

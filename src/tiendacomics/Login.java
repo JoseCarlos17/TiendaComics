@@ -84,35 +84,35 @@ public class Login extends javax.swing.JFrame {
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         
             try {
-                boolean esverdad=true;
+                boolean correcto=true;
                 
                 Class.forName("com.mysql.jdbc.Driver");
                 String url ="jdbc:mysql://localhost:3306/bd_aplicacion";
                 connec = (java.sql.DriverManager.getConnection(url,"root",""));
                 Statement s = (Statement) connec.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-                String query="SELECT * FROM usuarios";
+                String query="SELECT * FROM Usuarios";
                 r2=s.executeQuery(query);
                 String usuario=User.getText();
                 char contrapass[] = Passwd.getPassword();
                 String contra = new String(contrapass);
                 while(r2.next()){
                     if(usuario.equals(r2.getString("Nombre"))){
-                        if(contra.equals(r2.getString("Contra"))){
-                            esverdad=false;
+                        if(contra.equals(r2.getString("Passwd"))){
+                            correcto=false;
                         }
                     }
                 }
                 
                 
                 
-                if (esverdad==false){
+                if (correcto==false){
                     Menu men = new Menu();
                     men.setVisible(true);
                     this.setVisible(false);
                     men.setLocationRelativeTo(null);
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "", "Login Fallido", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Nombre o contraseña introducidos no válidos", "Login Error", JOptionPane.WARNING_MESSAGE);
                     Passwd.setText("");
                 }    } catch (ClassNotFoundException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);

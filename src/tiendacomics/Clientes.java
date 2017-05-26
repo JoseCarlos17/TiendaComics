@@ -68,8 +68,8 @@ public class Clientes extends javax.swing.JFrame {
         FechaCli = new javax.swing.JTextField();
         FechaNac = new javax.swing.JTextField();
         HistorialPed = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Siguiente = new javax.swing.JButton();
+        Anterior = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
@@ -117,11 +117,16 @@ public class Clientes extends javax.swing.JFrame {
         getContentPane().add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, 200, -1));
         getContentPane().add(HistorialPed, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, 200, -1));
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+        Siguiente.setText("Siguiente");
+        getContentPane().add(Siguiente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
-        jButton2.setText("jButton1");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
+        Anterior.setText("Anterior");
+        Anterior.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AnteriorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Anterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jButton3.setText("jButton1");
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
@@ -136,6 +141,10 @@ public class Clientes extends javax.swing.JFrame {
     private void CodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CodigoActionPerformed
+
+    private void AnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnteriorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AnteriorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,14 +181,14 @@ public class Clientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Anterior;
     private javax.swing.JTextField Apellidos;
     private javax.swing.JTextField Codigo;
     private javax.swing.JTextField FechaCli;
     private javax.swing.JTextField FechaNac;
     private javax.swing.JTextField HistorialPed;
     private javax.swing.JTextField Nombre;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Siguiente;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
